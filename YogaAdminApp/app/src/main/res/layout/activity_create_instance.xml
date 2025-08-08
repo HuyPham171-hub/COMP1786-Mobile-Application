@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/createInstanceLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".CreateInstanceActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="100dp"
+        android:orientation="horizontal"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvCreateInstanceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Class Instance"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <!-- Spinner: Select Course -->
+    <Spinner
+        android:id="@+id/spinnerSelectCourse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvCreateInstanceTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:spinnerMode="dropdown" />
+
+    <!-- EditText: Date -->
+    <EditText
+        android:id="@+id/editDateInstance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter date (dd/MM/yyyy)"
+        android:inputType="date"
+        app:layout_constraintTop_toBottomOf="@id/spinnerSelectCourse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- EditText: Teacher -->
+    <EditText
+        android:id="@+id/editTeacherInstance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter teacher name"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/editDateInstance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- EditText: Comment -->
+    <EditText
+        android:id="@+id/editCommentInstance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Add comment (optional)"
+        android:inputType="textMultiLine"
+        android:minLines="2"
+        app:layout_constraintTop_toBottomOf="@id/editTeacherInstance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Button: Save -->
+    <Button
+        android:id="@+id/btnSaveInstance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/editCommentInstance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Button: Cancel -->
+    <Button
+        android:id="@+id/btnCancelInstance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/btnSaveInstance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

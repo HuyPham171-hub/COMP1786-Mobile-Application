@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvCourseType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:text="Type:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDayTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Day/Time:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvCourseType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCapacityDuration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Capacity | Duration"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvDayTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Price:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvCapacityDuration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSkillLevel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Skill Level:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvSkillLevel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnEditCourse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Edit Course"
+        android:backgroundTint="@android:color/holo_purple"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnDeleteCourse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Delete Course"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/btnEditCourse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvInstancesHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class Instances:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/btnDeleteCourse"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingTop="8dp" />
+
+    <ListView
+        android:id="@+id/listViewInstancesForCourse"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        app:layout_constraintTop_toBottomOf="@id/tvInstancesHeader"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

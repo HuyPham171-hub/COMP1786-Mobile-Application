@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yoga Course"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnViewSchedule"
+        android:layout_marginTop="8dp" />
+
+    <!-- Button: View Schedule -->
+    <Button
+        android:id="@+id/btnViewSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Schedule"
+        android:drawableLeft="@android:drawable/ic_menu_agenda"
+        android:padding="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        app:layout_constraintStart_toEndOf="@id/tvTitle"
+        app:layout_constraintEnd_toStartOf="@id/btnAddCourse"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Button: Add Course -->
+    <Button
+        android:id="@+id/btnAddCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:drawableLeft="@android:drawable/ic_input_add"
+        android:padding="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Spinner: Day of Week -->
+    <Spinner
+        android:id="@+id/spinnerSearchDay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/days_array_all_days"
+        android:paddingLeft="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnViewSchedule" />
+
+    <Button
+        android:id="@+id/btnUploadToCloud"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Upload to Cloud"
+        android:drawableLeft="@android:drawable/ic_menu_upload"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:background="#FFA500"
+        app:layout_constraintTop_toBottomOf="@id/spinnerSearchDay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- ListView -->
+    <ListView
+        android:id="@+id/listViewCourses"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        app:layout_constraintTop_toBottomOf="@id/btnUploadToCloud"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
